@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiAdminUser.Models;
 
@@ -11,9 +12,11 @@ using WebApiAdminUser.Models;
 namespace WebApiAdminUser.Migrations
 {
     [DbContext(typeof(AdminUserDbContext))]
-    partial class AdminUserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240416004638_AllChanges")]
+    partial class AllChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
